@@ -81,5 +81,5 @@ langchain_google_genai
 This project is licensed under the MIT License.
 
 ## Author
-Developed by **Fikrewold**
+Developed by **Fikrewold Bitew**
 
