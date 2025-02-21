@@ -1,9 +1,8 @@
 # ScholarChat with PDFs using GPT4All
-![image](https://github.com/user-attachments/assets/bfa7a5e2-d156-48e5-92f8-4c6b698cba44)
 
 ## Overview
 ScholarChat with PDFs is a Streamlit-based application that allows users to upload PDF documents and interact with their content using an AI-powered chatbot. The app leverages GPT4All for generating responses and FAISS for efficient document search and retrieval.
-
+![image](https://github.com/user-attachments/assets/bfa7a5e2-d156-48e5-92f8-4c6b698cba44)
 ## Features
 - **Upload multiple PDFs** and extract text from them.
 - **Chunk the extracted text** into manageable pieces for better processing.
