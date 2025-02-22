@@ -11,17 +11,54 @@ The MultiPDF Chat App is a Python application that allows you to chat with multi
 
 ![MultiPDF Chat App Diagram](./docs/PDF-LangChain.jpg)
 
-The application follows these steps to provide responses to your questions:
+# Project Overview
 
-1. PDF Loading: The app reads multiple PDF documents and extracts their text content.
+This application provides responses to your questions by leveraging a local language model and processing text content. Below is an outline of how it works:
 
-2. Text Chunking: The extracted text is divided into smaller chunks that can be processed effectively.
+## How It Works
 
-3. Language Model: The application utilizes a language model to generate vector representations (embeddings) of the text chunks.
+The application follows these steps to generate responses:
 
-4. Similarity Matching: When you ask a question, the app compares it with the text chunks and identifies the most semantically similar ones.
+### Example Code
+# Project Overview
 
-5. Response Generation: The selected chunks are passed to the language model, which generates a response based on the relevant content of the PDFs.
+This application provides responses to your questions by leveraging a local language model and processing text content. Below is an outline of how it works:
+
+## How It Works
+
+The application follows these steps to generate responses:
+
+### Example Code
+
+```python
+from gpt4all import GPT4All
+model = GPT4All("Meta-Llama-3-8B-Instruct.Q4_0.gguf")  # Downloads/loads a 4.66GB LLM
+with model.chat_session():
+    print(model.generate("How can I run LLMs efficiently on my laptop?", max_tokens=1024))
+```
+
+ Troubleshooting
+
+If the above code doesn’t work, manually download the model and save it in the model folder.
+Processing Steps
+Processing Steps
+
+## How It Works
+
+### PDF Loading
+The app reads multiple PDF documents and extracts their text content.
+
+### Text Chunking
+The extracted text is split into smaller, manageable chunks for efficient processing.
+
+### Language Model
+A language model generates vector representations (embeddings) of the text chunks.
+
+### Similarity Matching
+When you ask a question, the app compares it to the text chunks and identifies the most semantically similar ones.
+
+### Response Generation
+The selected chunks are fed into the language model, which generates a response based on the relevant content from the PDFs.
 
 ## Dependencies and Installation
 ----------------------------
@@ -30,6 +67,8 @@ To install the MultiPDF Chat App, please follow these steps:
 1. Clone the repository to your local machine.
 
 2. Install the required dependencies by running the following command:
+
+
    ```
    pip install -r requirements.txt
    ```
